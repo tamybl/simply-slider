@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+:root {
+    --gallery-btn: #fff;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: oldlace;
+    font-family: "Lato", sans-serif;
+}
+
+.gallery {
+    width: 100%;
+    max-width: 1248px;
+    margin: 10px auto;
+    text-align: center;
+    position: relative;
+}
+
+.gallery .buttons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    top: 50%;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.gallery a {
+    text-decoration: none;
+    font-size: 22px;
+    /* display: block; */
+    width: 30px;
+    height: 30px;
+    color: var(--gallery-btn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #666;
+    border-radius: 21px;
+    position: absolute;
+}
+
+.gallery a.prev {
+    left: 1%;
+}
+
+.gallery a.next {
+    right: 1%;
+}
+
+.gallery a:hover {
+    color: #dfdfdf;
+}
+
+.gallery .photos {
+    position: relative;
+    height: 400px;
+}
+
+.gallery .block {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.gallery .block.active {
+    opacity: 1;
+}
+
+.block-1 {
+    background: lightcoral;
+}
+
+.block-2 {
+    background: teal;
+}
+
+.block-3 {
+    background: orchid;
+}
